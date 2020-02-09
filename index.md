@@ -1,11 +1,11 @@
 <html>
 <body>
 
-<h1>Heading:</h1>
+<h1> Welcome to Jack Weatherford's webpage.</h1>
 
+<p> LinkedIn: </p>
 
-
-<p>Paragraph...</p>
+<a href="https://www.linkedin.com/in/jackweatherford/">View my LinkedIn Profile</a>
 
 </body>
 </html>
