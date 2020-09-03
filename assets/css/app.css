@@ -153,7 +153,7 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .fragment-three .carousel-caption {
@@ -167,7 +167,7 @@ h5 {
 .fragment-four {
     background-color: #23395B;
     color: #406E8E;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
@@ -179,25 +179,21 @@ h5 {
 
 .fragment-four h2 {
     color: #8EA8C3;
-}   
-
-.fragment-four .labels {
-    color: #406E8E;
-    margin: 10px;
-    text-align: center;
-    min-width: 70%;
-    background: #406E8E;
 }
 
-.fragment-four .skill {
-    padding: 0.8em;
+.fragment-four .list-group-item {
+    padding: 0.5em;
     color: #8EA8C3;
-    border-bottom: 1px solid #000;
+    background: #406E8E;
+    border: 1px solid #161925;
     font-size: 1.2rem;
+    text-align: center;
+    margin-left: 475px;
+    margin-right: 475px;
 }
 
-.fragment-four .skill:hover {
-    transition-duration: 0.3s;
+.fragment-four .list-group-item:hover {
+    transition-duration: 0.5s;
     background: #23395B;
 }
 
@@ -227,6 +223,7 @@ h5 {
 }
 
 .fragment-six {
+    text-align: center;
     padding: 20px;
 }
 
@@ -235,12 +232,13 @@ h5 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     font-weight: 900;
+    margin-top: 20px;
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
 .fragment-six .social-icon {
-    color: #CBF7ED;
-    font-size: 1.2rem;
+    color: #161925;
+    font-size: 5rem;
     margin-right: 15px;
     margin-bottom: 20px;
 }
