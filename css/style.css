@@ -1,0 +1,165 @@
+:root {
+  /* Global variables */
+  --bg-color: #000000;
+  --user-color: #64d238;
+  --dir-color: #3442f1;
+  --text-color: #e6e6e6;
+  --caret-color: #e6e6e6;
+  --char-width: 7.15px;
+  --char-height: 15.2px;
+}
+
+* {
+  flex-wrap: nowrap;
+  color: var(--text-color);
+  font-family: monospace;
+}
+
+html,
+body {
+  background-color: var(--bg-color);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 5px;
+}
+
+#title {
+  font-size: 175%;
+  text-align: center;
+  color: var(--user-color);
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#header {
+  display: grid;
+  grid-template-columns: 660px 1fr;
+  grid-row: 1;
+}
+
+#tabs {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  display: grid;
+  grid-template-columns: 132px 1fr 1fr 1fr 1fr;
+  grid-row: 1;
+}
+
+#tabs button {
+  background-color: var(--bg-color);
+  font-size: 125%;
+  border: 3px;
+  border-style: solid;
+  border-color: var(--user-color);
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-top: 16px;
+  padding-bottom: 15.19px;
+  z-index: 1;
+}
+
+#tabs button:focus {
+  outline: 0px;
+}
+
+#tabs #about {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+#corners {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  margin-top: 53.2px;
+  display: grid;
+  grid-template-columns: min-content min-content min-content min-content min-content min-content;
+  grid-row: 1;
+}
+
+#corners div {
+  height: 3.12px;
+  width: 5.27px;
+  background-color: var(--user-color);
+  margin-right: 126.73px;
+  z-index: 2;
+}
+
+#corners #first-corner,
+#corners #last-corner {
+  width: 2.59px;
+}
+
+#date {
+  text-align: right;
+  height: 35px;
+  margin: 10px;
+}
+
+#terminal {
+  position: relative;
+  top: -2.91px;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  height: calc(100vh - 200px);
+  border: 3px;
+  border-style: solid;
+  border-color: var(--user-color);
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  padding: 5px;
+  padding-bottom: var(--char-height);
+  overflow: auto;
+}
+
+#terminal span {
+  white-space: pre;
+}
+
+#prompt {
+  display: grid;
+  grid-template-columns: min-content min-content min-content min-content;
+  grid-row: 1;
+}
+
+.old {
+  opacity: 0.75;
+}
+
+.user {
+  color: var(--user-color);
+}
+
+.dir {
+  color: var(--dir-color);
+}
+
+a.dir:hover,
+a.file:hover {
+  color: var(--user-color);
+  cursor: pointer;
+}
+
+#caret,
+#input-wrap {
+  /* Overlaps blinking caret and input box */
+  grid-column-start: 4;
+  grid-row-start: 1;
+}
+
+#caret {
+  width: var(--char-width);
+  height: var(--char-height);
+  background: var(--caret-color);
+  visibility: visible;
+}
+
+#input {
+  /* Hides input box */
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
