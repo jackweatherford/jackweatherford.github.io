@@ -4,7 +4,9 @@ An interactive website showcasing everything about me.\
 Includes a working terminal!\
 Explore my resume, experience, skills, side projects, and future goals.
 
-## Commands
+## TODO
+
+### Commands
 
 - [x] cat
 - [x] cd
@@ -22,9 +24,9 @@ Explore my resume, experience, skills, side projects, and future goals.
 - [ ] save
 - [ ] touch
 
-## Features
+### Features
 
-### index.js
+#### index.js
 
 - Implement arrow key handlers.
 - Implement tab handler. (auto-complete)
@@ -32,11 +34,11 @@ Explore my resume, experience, skills, side projects, and future goals.
   - Initial approach: only autocomplete for current directory.
   - Advanced approach: update autocomplete options based on current filepath in input.
 
-### echo.js
+#### echo.js
 
 - Replace `\n` with `<br />` when arg is between "" or ''.
 
-### Misc
+#### Misc
 
 - Testing suite (Enter various commands - assert output)
 - Settings (fonts, themes, colors, volume)
