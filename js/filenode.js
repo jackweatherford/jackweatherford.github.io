@@ -42,15 +42,6 @@ const projects = new DirNode("Projects", root);
 const skills = new DirNode("Skills", root);
 
 // Projects
-const amongusbux = new DirNode("AmongUsBux", projects, true);
-amongusbux.setChildren({
-  "README.txt": new FileNode(
-    "README.txt",
-    amongusbux,
-    "An Among Us themed Discord economy bot"
-  ),
-});
-
 const jackweatherford_github_io = new DirNode(
   "jackweatherford.github.io",
   projects,
@@ -118,7 +109,7 @@ about.setChildren({
   "README.txt": new FileNode(
     "README.txt",
     about,
-    "Nice to meet you, my name's Jack.\nI'm a passionate/experienced software developer/tutor with a B.S. in Computer Science.\nI'm currently working as a full-time Journeyman Developer for buildlabs.io and TA-ing for Berkeley's Online Data Analytics bootcamp part-time."
+    "Nice to meet you, my name's Jack.\nI'm a passionate/experienced software developer/tutor with a B.S. in Computer Science.\nI'm currently working as a full-time Journeyman Developer for buildlabs.io."
   ),
 });
 
@@ -139,7 +130,6 @@ education.setChildren({
 });
 
 projects.setChildren({
-  AmongUsBux: amongusbux,
   "jackweatherford.github.io": jackweatherford_github_io,
   JstrisBot: jstrisbot,
   PythonInterpreter: pythoninterpreter,
