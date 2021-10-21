@@ -45,8 +45,6 @@ export async function run(args) {
       content += `>${name}</a>    `;
     });
 
-  console.log(content);
-
   $("#history").append(`<span class="stdout">${content}</span><br />`);
 
   $("a.dir").off("click");
