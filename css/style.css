@@ -18,12 +18,15 @@
 html,
 body {
   background-color: var(--bg-color);
-  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
   margin: 5px;
+}
+
+body:not(#privacy) {
+  position: fixed;
 }
 
 #title {
