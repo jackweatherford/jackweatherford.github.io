@@ -1,7 +1,7 @@
 # [jackweatherford.github.io](https://jackweatherford.github.io/)
 
-An interactive website showcasing everything about me.\
-Includes a working terminal!\
+An interactive website showcasing everything about me.
+Includes a working terminal!
 Explore my resume, experience, skills, side projects, and future goals.
 
 ## TODO
