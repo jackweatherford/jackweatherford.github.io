@@ -147,6 +147,10 @@ a.file:hover {
   cursor: pointer;
 }
 
+.stdout a:not(.dir):not(.file):hover {
+  opacity: 0.8;
+}
+
 #caret,
 #input-wrap {
   /* Overlaps blinking caret and input box */
