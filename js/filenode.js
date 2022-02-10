@@ -23,13 +23,18 @@ export class DirNode extends Node {
 }
 
 export class FileNode extends Node {
-  constructor(name, parent, contents) {
+  constructor(name, parent, contents, tagOverride) {
     super(name, parent);
     this.contents = contents;
+    this.tagOverride = tagOverride;
   }
 
   setContents(contents) {
     this.contents = contents;
+  }
+
+  setTagOverride(tagOverride) {
+    this.tagOverride = tagOverride;
   }
 }
 
@@ -42,52 +47,54 @@ const projects = new DirNode("Projects", root);
 const skills = new DirNode("Skills", root);
 
 // Projects
-const jackweatherford_github_io = new DirNode(
+const jackweatherfordGithubIo = new DirNode(
   "jackweatherford.github.io",
   projects,
   true
 );
-jackweatherford_github_io.setChildren({
+jackweatherfordGithubIo.setChildren({
   "README.txt": new FileNode(
     "README.txt",
-    jackweatherford_github_io,
-    "The source code for this website.\nCan you find any easter eggs? ;D"
+    jackweatherfordGithubIo,
+    "An interactive website showcasing everything about me.\nIncludes a working terminal!\nExplore my resume, experience, skills, side projects, and future goals.\nWritten in HTML + CSS + JavaScript. (JQuery)"
   ),
 });
 
-const jstrisbot = new DirNode("JstrisBot", projects, true);
-jstrisbot.setChildren({
+const jstrisBot = new DirNode("JstrisBot", projects, true);
+jstrisBot.setChildren({
   "README.txt": new FileNode(
     "README.txt",
-    jstrisbot,
-    "AI that plays Tetris through jstris.jezevec10.com"
+    jstrisBot,
+    "AI that plays Tetris through <a href='https://jstris.jezevec10.com/' target='_blank'>https://jstris.jezevec10.com/</a>\nWritten in Python.",
+    true
   ),
 });
 
-const pythoninterpreter = new DirNode("PythonInterpreter", projects, true);
-pythoninterpreter.setChildren({
+const pythonInterpreter = new DirNode("PythonInterpreter", projects, true);
+pythonInterpreter.setChildren({
   "README.txt": new FileNode(
     "README.txt",
-    pythoninterpreter,
-    "A simple python interpreter written in C++ that mimics Python 2.7"
+    pythonInterpreter,
+    "A simple Python interpreter that mimics Python 2.7.\nWritten in C++."
   ),
 });
 
-const shufflefileorder = new DirNode("shufflefileorder", projects, true);
-shufflefileorder.setChildren({
+const reactTicTacToe = new DirNode("ReactTicTacToe", projects, true);
+reactTicTacToe.setChildren({
   "README.txt": new FileNode(
     "README.txt",
-    shufflefileorder,
-    "Randomize the order of files within a directory"
+    reactTicTacToe,
+    "My solution for React's 'Intro to React' Tutorial. <a href='https://reactjs.org/tutorial/tutorial.html' target='_blank'>https://reactjs.org/tutorial/tutorial.html</a>\nWritten in JavaScript (React) + CSS.",
+    true
   ),
 });
 
-const textbouncer = new DirNode("TextBouncer", projects, true);
-textbouncer.setChildren({
+const spotifyFriendActivity = new DirNode("spotify-friend-activity", projects, true);
+spotifyFriendActivity.setChildren({
   "README.txt": new FileNode(
     "README.txt",
-    textbouncer,
-    "Bounces specified text/image around a transparent screen"
+    spotifyFriendActivity,
+    "Google Chrome Extension to view your friends' activity in Spotify's web player.\nWritten in JavaScript (React) + CSS (Sass)."
   ),
 });
 
@@ -117,7 +124,8 @@ contact.setChildren({
   "README.txt": new FileNode(
     "README.txt",
     contact,
-    "Feel free to contact me using the following links with whatever's on your mind:\nE-Mail: jack.weatherford@gmail.com\nGitHub: https://github.com/jackweatherford\nLinkedIn: https://www.linkedin.com/in/jackweatherford"
+    "Feel free to contact me using the following links with whatever's on your mind:\nE-Mail: <a href='mailto:jack.weatherford@gmail.com'>jack.weatherford@gmail.com</a>\nGitHub: <a href='https://github.com/jackweatherford' target='_blank'>https://github.com/jackweatherford</a>\nLinkedIn: <a href='https://www.linkedin.com/in/jackweatherford' target='_blank'>https://www.linkedin.com/in/jackweatherford</a>",
+    true
   ),
 });
 
@@ -130,11 +138,11 @@ education.setChildren({
 });
 
 projects.setChildren({
-  "jackweatherford.github.io": jackweatherford_github_io,
-  JstrisBot: jstrisbot,
-  PythonInterpreter: pythoninterpreter,
-  shufflefileorder: shufflefileorder,
-  TextBouncer: textbouncer,
+  "jackweatherford.github.io": jackweatherfordGithubIo,
+  JstrisBot: jstrisBot,
+  PythonInterpreter: pythonInterpreter,
+  ReactTicTacToe: reactTicTacToe,
+  "spotify-friend-activity": spotifyFriendActivity,
   "README.txt": new FileNode(
     "README.txt",
     projects,
@@ -146,6 +154,6 @@ skills.setChildren({
   "README.txt": new FileNode(
     "README.txt",
     skills,
-    "A subset of my most refined technical skills in no particular order:\n- Python (Numpy, Pandas, Matplotlib, Requests, OpenCV, Selenium, Pywin32, Unittest, Discord.py)\n- JavaScript (Node, React, Express, jQuery, D3)\n- C++\n- Java\n- SQL (MySQL, PostgreSQL)\n- NoSQL (MongoDB)\n- AWS (RDS, S3)"
+    "A subset of my most refined technical skills in no particular order:\n- JavaScript (Node, React, React Native, Expo, Next, Express, jQuery, D3)\n- HTML\n- CSS (Sass, Bootstrap)\n- Python (Numpy, Pandas, Matplotlib, Requests, OpenCV, Selenium, Pywin32, Unittest, Discord.py)\n- AWS (RDS, S3, Amplify)\n- SQL (MySQL, PostgreSQL)\n- NoSQL (MongoDB)\n- C++\n- Java"
   ),
 });
