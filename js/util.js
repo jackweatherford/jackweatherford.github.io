@@ -50,10 +50,10 @@ export function tokenize(input) {
 
 // Returns the Node Object that the given filepath points to
 export function nodeFromPath(filepath) {
-  var nodes = filepath.split("/");
+  var nodes = filepath?.split("/");
   var cwd = os.cwd;
 
-  if (nodes[0] == "") {
+  if (nodes == undefined || nodes[0] == "") {
     return null;
   } else if (nodes[0] == "~") {
     cwd = root;

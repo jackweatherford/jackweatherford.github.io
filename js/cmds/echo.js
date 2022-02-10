@@ -4,7 +4,7 @@ export async function run(args) {
 
   $("#history").append(
     `<span class="stdout">${args
-      .map((arg) => (arg.includes("<br />") ? arg : arg + " "))
+      .map((arg) => (arg?.includes("<br />") ? arg : arg || "" + " "))
       .join("")}</span><br />`
   );
 }

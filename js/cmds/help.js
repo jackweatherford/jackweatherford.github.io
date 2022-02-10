@@ -2,7 +2,7 @@ import { cmds, aliases, cmd_list } from "../index.js";
 
 export async function run(args) {
   if (args.length) {
-    const first_arg = args[0].toLowerCase();
+    const first_arg = args[0]?.toLowerCase();
     var aliased = false;
     var cmd = cmds[first_arg];
     if (!cmd) {
@@ -26,7 +26,7 @@ export async function run(args) {
       );
     } else {
       $("#history").append(
-        `<span class="stderr">help: '${args[0]}': Command not found. Type 'help' to list available commands.</span><br />`
+        `<span class="stderr">help: '${args[0] || ''}': Command not found. Type 'help' to list available commands.</span><br />`
       );
     }
   } else {
