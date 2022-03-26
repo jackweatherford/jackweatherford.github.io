@@ -89,7 +89,11 @@ reactTicTacToe.setChildren({
   ),
 });
 
-const spotifyFriendActivity = new DirNode("spotify-friend-activity", projects, true);
+const spotifyFriendActivity = new DirNode(
+  "spotify-friend-activity",
+  projects,
+  true
+);
 spotifyFriendActivity.setChildren({
   "README.txt": new FileNode(
     "README.txt",
@@ -154,6 +158,6 @@ skills.setChildren({
   "README.txt": new FileNode(
     "README.txt",
     skills,
-    "A subset of my most refined technical skills in no particular order:\n- JavaScript (Node, React, React Native, Expo, Next, Express, jQuery, D3)\n- HTML\n- CSS (Sass, Bootstrap)\n- Python (Numpy, Pandas, Matplotlib, Requests, OpenCV, Selenium, Pywin32, Unittest, Discord.py)\n- AWS (RDS, S3, Amplify)\n- SQL (MySQL, PostgreSQL)\n- NoSQL (MongoDB)\n- C++\n- Java"
+    "A subset of my most refined technical skills in no particular order:\n- JavaScript (React.js, TypeScript, jQuery, Next.js, Redux.js, React Native)\n- CSS (SASS, Bootstrap)\n- HTML\n- Git\n- GraphQL\n- SQL (MySQL, PostgreSQL)\n- NoSQL (MongoDB)\n- Python (Numpy, Pandas, Matplotlib, Requests, OpenCV, Selenium, Pywin32, Unittest, Discord.py)\n- C++\n- Java\n- Unix\n- AWS (RDS, S3, Amplify)\n- Agile Methodologies\n- Teaching\n- Public Speaking\n- Leadership"
   ),
 });
