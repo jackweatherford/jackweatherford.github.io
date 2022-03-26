@@ -11,7 +11,9 @@ export async function run(args) {
     if (!node || node instanceof FileNode) {
       // If the Node doesn't exist or it isn't a Directory Node
       $("#history").append(
-        `<span class="stderr">cd: Cannot traverse '${args[0] || ''}': No such directory.</span><br />`
+        `<span class="stderr">cd: Cannot traverse '${
+          args[0] || ""
+        }': No such directory.</span><br />`
       );
       return;
     } else {

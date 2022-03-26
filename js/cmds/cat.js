@@ -9,7 +9,9 @@ export function run(args) {
       if (!node || node instanceof DirNode) {
         // If the Node doesn't exist or it isn't a File Node
         $("#history").append(
-          `<span class="stderr">cat: Cannot display '${arg || ''}': No such file.</span><br />`
+          `<span class="stderr">cat: Cannot display '${
+            arg || ""
+          }': No such file.</span><br />`
         );
       } else {
         var contents = node.contents;
