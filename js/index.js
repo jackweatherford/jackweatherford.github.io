@@ -1,9 +1,19 @@
 import { root } from "./filenode.js";
 import { loadCmds, updateCaret, tokenize, pathFromNode } from "./util.js";
 
-/* Initializes the clock element
+// Initializes the clock element
 var date = new Date();
-$("#date").html(date.toLocaleString().split(", ").join("<br />")); */
+const dateOptions = {
+  year: "2-digit",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+};
+$("#date").html(
+  date.toLocaleString(undefined, dateOptions).split(", ").join("<br />")
+);
 
 // Initializes the list of available cmds
 export const cmd_list = ["cat", "cd", "clear", "echo", "help", "ls", "pwd"];
@@ -33,64 +43,14 @@ var ctrl_down = false;
 var text_highlighted = false;
 var selected_button = null;
 
-/* Updates clock every second
+// Updates clock every second
 window.setInterval(function () {
   setTimeout(function () {
     date = new Date();
-    $("#date").html(date.toLocaleString().split(", ").join("<br />"));
+    $("#date").html(
+      date.toLocaleString(undefined, dateOptions).split(", ").join("<br />")
+    );
   }, 1000 - date.getMilliseconds());
-}, 0);
-*/
-
-// Countdown
-let dateFuture = new Date(2022, 9, 19, 22, 35, 0);
-let days = 0;
-let hours = 0;
-let mins = 0;
-let secs = 0;
-
-// Call when everything has loaded
-window.setInterval(function () {
-  setTimeout(function () {
-    // Grab current date
-    let dateNow = new Date();
-    // Calculate milliseconds between dates
-    let amount = dateFuture.getTime() - dateNow.getTime();
-
-    // If date is in the past
-    if (amount < 0) {
-      $("#countdown").html("Now!");
-    }
-    // Else if date is in the future
-    else {
-      let out = "";
-      // Convert to seconds
-      amount = Math.floor(amount / 1000);
-      // Get days
-      days = Math.floor(amount / 86400);
-      amount = amount % 86400;
-      // Get hours
-      hours = Math.floor(amount / 3600);
-      amount = amount % 3600;
-      // Get minutes
-      mins = Math.floor(amount / 60);
-      amount = amount % 60;
-      // Get seconds
-      secs = Math.floor(amount);
-
-      if (days != 0) {
-        out += days + " day" + (days != 1 ? "s" : "") + ", ";
-      }
-      if (days != 0 || hours != 0) {
-        out += hours + " hour" + (hours != 1 ? "s" : "") + ", ";
-      }
-      if (days != 0 || hours != 0 || mins != 0) {
-        out += mins + " minute" + (mins != 1 ? "s" : "") + ", ";
-      }
-      out += secs + " seconds";
-      $("#countdown").html(out);
-    }
-  }, 1000);
 }, 0);
 
 // Blinks caret every 0.5 seconds

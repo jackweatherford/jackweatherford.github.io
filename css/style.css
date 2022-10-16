@@ -96,8 +96,7 @@ body:not(#privacy) {
   width: 2.59px;
 }
 
-#date,
-#countdown {
+#date {
   text-align: right;
   height: 35px;
   margin: 10px;
