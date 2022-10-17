@@ -1,0 +1,33 @@
+h2 {
+  margin: 0;
+}
+
+#header {
+  text-align: center;
+}
+
+#showcase {
+  text-align: center;
+}
+
+#downloads {
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+}
+
+#downloads div:not(:first-child) {
+  margin-left: 32px;
+}
+
+#downloads div:not(:last-child) {
+  margin-right: 32px;
+}
+
+@media screen and (max-width: 470px) {
+  #showcase img {
+    width: 100%;
+    height: unset;
+  }
+}

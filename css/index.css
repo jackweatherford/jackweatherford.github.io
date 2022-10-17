@@ -1,31 +1,4 @@
-:root {
-  /* Global variables */
-  --bg-color: #000000;
-  --user-color: #64d238;
-  --dir-color: #3442f1;
-  --text-color: #e6e6e6;
-  --caret-color: #e6e6e6;
-  --char-width: 7.15px;
-  --char-height: 15.2px;
-}
-
-* {
-  flex-wrap: nowrap;
-  color: var(--text-color);
-  font-family: monospace;
-}
-
-html,
 body {
-  background-color: var(--bg-color);
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  margin: 5px;
-}
-
-body:not(#privacy) {
   position: fixed;
 }
 
