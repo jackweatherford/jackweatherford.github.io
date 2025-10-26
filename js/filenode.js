@@ -120,7 +120,7 @@ about.setChildren({
   "README.txt": new FileNode(
     "README.txt",
     about,
-    "Nice to meet you, my name's Jack.\nI'm a passionate/experienced software developer/tutor with a B.S. in Computer Science.\nI'm currently working as a full-time Journeyman Developer for buildlabs.io."
+    "Nice to meet you, my name's Jack.\nI'm a passionate/experienced software developer/tutor with a B.S. in Computer Science.\nI'm currently working as a full-time Lead Developer for buildlabs.io."
   ),
 });
 
@@ -158,6 +158,6 @@ skills.setChildren({
   "README.txt": new FileNode(
     "README.txt",
     skills,
-    "A subset of my most refined technical skills in no particular order:\n- JavaScript (React.js, TypeScript, jQuery, Next.js, Redux.js, React Native)\n- CSS (SASS, Bootstrap)\n- HTML\n- Git\n- GraphQL\n- SQL (MySQL, PostgreSQL)\n- NoSQL (MongoDB)\n- Python (Numpy, Pandas, Matplotlib, Requests, OpenCV, Selenium, Pywin32, Unittest, Discord.py)\n- C++\n- Java\n- Unix\n- AWS (RDS, S3, Amplify)\n- Agile Methodologies\n- Teaching\n- Public Speaking\n- Leadership"
+    "A subset of my most refined technical skills in no particular order:\n- JavaScript (React.js, TypeScript, jQuery, Next.js, Redux.js, React Native, Vue.js)\n- CSS (SASS, Bootstrap)\n- HTML\n- Git\n- GraphQL\n- SQL (MySQL, PostgreSQL)\n- NoSQL (MongoDB)\n- Python (Numpy, Pandas, Matplotlib, Requests, OpenCV, Selenium, Pywin32, Unittest, Discord.py)\n- C++\n- Java\n- Unix\n- AWS (RDS, S3, Amplify)\n- Agile Methodologies\n- Teaching\n- Public Speaking\n- Leadership"
   ),
 });
